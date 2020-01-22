@@ -1,0 +1,14 @@
+#khi muon chay nhieu service khac nhau thi se dung docker-compose (o day chi co mot service, nen ko thay dieu do, co the add them nhieu service khac nhu service-user, service-room, ...vao day)
+#chi ra version cua docker compose
+version: '3.7'
+
+services:
+  #ten service (ko biet co can dat theo quy tac gi ko???)
+  golang-web:
+    #ten image muon chay
+    image: fb2ccb612b9d
+    build: .
+    #port cua ung dung port export ra ngoai:post trong docker
+    ports:
+      - 8080:9996
+    restart: always
