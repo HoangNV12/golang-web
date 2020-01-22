@@ -9,6 +9,7 @@ RUN go get -v ./...
 #lenh nay se build ung dung
 RUN go install golang-web
 #lenh nay se chay ung dung sau khi build o lenh tren
+#**CMD** chạy lệnh để bắt đầu ứng dụng của bạn. Mỗi `dockerfile` chỉ khai báo duy nhất một CMD (giong nhu ENTRYPOINT)
 ENTRYPOINT /go/bin/golang-web
 #cong se chay ung dung (chay o trong docker, ko phai cong chay tu ngoai ung dung vao)
 EXPOSE 9996
